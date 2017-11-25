@@ -1,6 +1,6 @@
 package Abstr;
 
-public class AirRun extends Transport {
+public class AirRun extends Transport implements Cloneable{
     public AirRun(String type, String destination) {
         super(type, destination);
     }
@@ -27,5 +27,10 @@ public class AirRun extends Transport {
         }
         AirRun wr = (AirRun) obj;
         return this.getType() == wr.getType();
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

@@ -1,7 +1,7 @@
 package Abstr;
 
 public class MainClass {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
         EarthRun bus = new EarthRun("наземный", "гражданское");
         EarthRun track = new EarthRun("наземный", "военное");
 
@@ -19,6 +19,16 @@ public class MainClass {
         if (tu154.equals(su34)){
             System.out.println("равны");
         }
+        
+        if (su34.equals(akula)){
+            System.out.println("равны");
+        }
+        else {
+            System.out.println("не равны");
+        }
+
+        //клонирование
+        AirRun airRunClone = (AirRun) tu154.clone();
 
     }
 }
